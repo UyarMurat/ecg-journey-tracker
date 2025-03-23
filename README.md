@@ -1,13 +1,8 @@
 # Welcome! I'm trying to add some Projects in my Portfolio, feel free to use them for yourself
 
-## Project info
-
-**URL**: https://lovable.dev/projects/141ebcee-e303-4236-aaf6-fc386222ba9b
-
 ## How can I edit this code?
 
 There are several ways of editing your application.
-
 
 **Use your preferred IDE**
 
