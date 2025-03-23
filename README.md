@@ -49,3 +49,7 @@ This project is built with .
 - React
 - shadcn-ui
 - Tailwind CSS
+
+FYI:
+Currently, the app uses sample data and doesn't persist information
+You would need to add a backend storage solution like Supabase
