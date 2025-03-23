@@ -41,7 +41,7 @@ const ECGChart = () => {
     return () => clearTimeout(timer);
   }, [activeRange]);
 
-  const formatXAxis = (value: number) => {
+  const formatXAxis = (value: number): string => {
     switch (activeRange) {
       case "24h":
         return `${value % 24}:00`;
@@ -51,7 +51,7 @@ const ECGChart = () => {
       case "90d":
         return `Day ${value + 1}`;
       default:
-        return value;
+        return String(value);
     }
   };
 
@@ -111,10 +111,11 @@ const ECGChart = () => {
               <Tooltip
                 content={({ active, payload }) => {
                   if (active && payload && payload.length) {
+                    const value = payload[0].value;
                     return (
                       <div className="glass rounded-lg p-2 shadow-sm text-sm">
                         <p className="font-medium">{`${formatXAxis(payload[0].payload.time)}`}</p>
-                        <p className="text-primary">{`Value: ${payload[0].value.toFixed(1)} bpm`}</p>
+                        <p className="text-primary">{`Value: ${typeof value === 'number' ? value.toFixed(1) : value} bpm`}</p>
                       </div>
                     );
                   }
